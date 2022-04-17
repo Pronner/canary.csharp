@@ -16,6 +16,12 @@ namespace Canary
 		{
 
 			// libDefinitions
+			
+			//sendMessage
+			//kickMember
+			//banMember
+			
+			
 			CheckForIllegalCrossThreadCalls = false;
 
 		}
