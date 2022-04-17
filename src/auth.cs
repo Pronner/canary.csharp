@@ -22,6 +22,7 @@ namespace Canary
 
 			CanaryAPI.StartAuthProcess();
 			CanaryAPI.WaitForAuthEnd("3x10s");
+			CanaryAPI.VerifyClient(client, DateTime.Now, "3x10s");
 			CanaryAPI.Reload(client);
 
 			// end auth
