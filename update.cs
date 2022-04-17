@@ -42,7 +42,7 @@ namespace Canary
 				{
 
 					// oops
-					string oopsie = "seems like the class isn't closing";
+					string oopsie = "uhh we can't exit";
 
 					Console.WriteLine(oopsie);
 
