@@ -15,7 +15,7 @@ namespace Canary
 			if (CanaryAPI.errorReceived != string.Empty) 
 			{
 
-			    CanaryAPI.handleError();
+			        CanaryAPI.handleError();
 
 				CanaryAPI.errorReceived.ToString();
 
