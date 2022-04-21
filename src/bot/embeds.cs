@@ -34,8 +34,10 @@ namespace Canary
 
         public void EmbedSubmittedEventArgs(CanaryEmbedEventArgs e)
         {
+        
             
             embed.Load(); // After the embed is submitted, it sends the request to the server using the ".Load()" function.
+
 
         }
 
