@@ -12,6 +12,7 @@ namespace Canary
         object embed;
         object EmbedDateIntent;
         object EmbedTextBox;
+        object EmbedColor;
 
         bool isFinishedLoading = false;
 
@@ -21,10 +22,11 @@ namespace Canary
             embed = CanaryAPI.embedObject();
             EmbedDateIntent = CanaryAPI.embed.Properties.DateTimePicker();
             EmbedTextBox = CanaryAPI.embed.Properties.EmbedTextBox();
+            EmbedColor = CanaryAPI.embed.Properties.embedColor();
 
             CanaryAPI.createObject(embed);
 
-            embed.AddProperties("Title" += embed.Properties.Title, "Icon" += embed.Properties.Title, "Description" += embed.Properties.Description && embed.Properties.enableMultiLine = true, "Section Field" += embed.Properties.Field, "Footer" += embed.Properties.Footer, "ButtonTitle" += embed.Properties.Button.Title, "ButtonColor" += embed.Properties.Button.Color.Option(canBeFromRGB = true, canBeFromHEX = false), "EnableRainbowButton" += embed.Properties.Settings.boolSetting = true && "EnableRainbowButton" += embed.Properties.LookFor("EnableRainbowButton").Description("A rainbow button for a Canary embed!"), EmbedDateIntent = embed.Properties.DateTimePicker.Format("YYYY/MM/DD"), EmbedTextBox = embed.Properties.EmbedTextBox && EmbedTextBox.Text = embed.Properties.EmbedTextBox.Text && EmbedTextBox.Color = embed.Properties.EmbedTextBox.ForeColor && EmbedTextBox.BackgroundColor = embed.Properties.EmbedTextBox.Background.Color.Option(canBeFromRGB = true, canBeFromHEX = false));
+            embed.AddProperties(EmbedColor += embed.Properties.embedColor, "Title" += embed.Properties.Title, "Icon" += embed.Properties.Title, "Description" += embed.Properties.Description && embed.Properties.enableMultiLine = true, "Section Field" += embed.Properties.Field, "Footer" += embed.Properties.Footer, "ButtonTitle" += embed.Properties.Button.Title, "ButtonColor" += embed.Properties.Button.Color.Option(canBeFromRGB = true, canBeFromHEX = false), "EnableRainbowButton" += embed.Properties.Settings.boolSetting = true && "EnableRainbowButton" += embed.Properties.LookFor("EnableRainbowButton").Description("A rainbow button for a Canary embed!"), EmbedDateIntent = embed.Properties.DateTimePicker.Format("YYYY/MM/DD"), EmbedTextBox = embed.Properties.EmbedTextBox && EmbedTextBox.Text = embed.Properties.EmbedTextBox.Text && EmbedTextBox.Color = embed.Properties.EmbedTextBox.ForeColor && EmbedTextBox.BackgroundColor = embed.Properties.EmbedTextBox.Background.Color.Option(canBeFromRGB = true, canBeFromHEX = false));
 
             EmbedSubmittedEventArgs += embed.EmbedSubmittedEventArgs;
             this.Controls.Add(EmbedSubmittedEventArgs);
