@@ -1,3 +1,5 @@
+/* Canary.CSharp | errorhandler */
+
 using System;
 using CanaryAPI;
 using System.IO;
